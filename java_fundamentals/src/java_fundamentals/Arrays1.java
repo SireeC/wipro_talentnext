@@ -3,7 +3,7 @@ package java_fundamentals;
 public class Arrays1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		int array[] = {1,3,4,5,9};
 		int sum=0;
 		

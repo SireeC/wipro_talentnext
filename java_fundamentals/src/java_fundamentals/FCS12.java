@@ -4,7 +4,7 @@ public class FCS12 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int num=17, count=0;
+		int num=6, count=0;
 		for(int i=1;i<=num;i++) {
 			if(num%i==0) {
 				count++;

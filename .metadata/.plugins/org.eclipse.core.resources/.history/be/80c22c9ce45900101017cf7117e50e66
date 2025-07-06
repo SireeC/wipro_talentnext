@@ -1,0 +1,18 @@
+package java_fundamentals;
+
+public class Arrays5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int array[] = {2,5,3,6,8,9,7};
+		Arrays.sort(array);
+		System.out.println("Highest values are: "+array[array.length-2]+", "+array[array.length-1]);
+		System.out.println("Lowest values are: "+array[0]+", "+array[1]);
+			
+			
+		}
+		
+
+	}
+
+}
