@@ -1,8 +1,6 @@
 package java_fundamentals;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
+import java.util.*;
 
 public class Arrays7 {
 

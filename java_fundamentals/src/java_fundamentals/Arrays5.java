@@ -1,5 +1,5 @@
 package java_fundamentals;
-import java.util.Arrays;
+import java.util.*;
 
 public class Arrays5 {
 
