@@ -1,52 +1,77 @@
 package oops;
 
-class Fruit{
-	
-	String name;
-	String taste;
-	String size;
-	
-	Fruit(String name, String taste, String size){
-		this.name=name;
-		this.taste=taste;
-		this.size=size;
-	}
-	
-	public void eat() {
-		System.out.println("Fruit: "+name+"\nTaste: "+taste+"\nSize: "+size);
-	}
+class Person {
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 
-class Apple extends Fruit{
-	public Apple(String name, String taste, String size) {
-		super(name, taste, size);
-	}
+class Employees extends Person {
 	
-	public void eat() {
-		System.out.println("Taste of the Apple: "+taste);
-	}
-}
+	private double annualSalary;
+	private int yearStarted;
+	private String nationalInsuranceNumber;
 
-class Orange extends Fruit{
-	public Orange(String name, String taste, String size) {
-		super(name, taste, size);
+	public Employees(String name, double annualSalary, int yearStarted, String nationalInsuranceNumber) {
+		super(name);
+		this.annualSalary = annualSalary;
+		this.yearStarted = yearStarted;
+		this.nationalInsuranceNumber = nationalInsuranceNumber;
 	}
-	
-	public void eat() {
-		System.out.println("Taste of the Orange: "+taste);
+
+	public double getAnnualSalary() {
+		return annualSalary;
+	}
+
+	public int getYearStarted() {
+		return yearStarted;
+	}
+
+	public String getNationalInsuranceNumber() {
+		return nationalInsuranceNumber;
+	}
+
+	public void setAnnualSalary(double annualSalary) {
+		this.annualSalary = annualSalary;
+	}
+
+	public void setYearStarted(int yearStarted) {
+		this.yearStarted = yearStarted;
+	}
+
+	public void setNationalInsuranceNumber(String nationalInsuranceNumber) {
+		this.nationalInsuranceNumber = nationalInsuranceNumber;
+	}
+
+	public void displayInfo() {
+		System.out.println("Name: " + getName());
+		System.out.println("Annual Salary: $" + annualSalary);
+		System.out.println("Year Started: " + yearStarted);
+		System.out.println("National Insurance Number: " + nationalInsuranceNumber);
 	}
 }
 
 public class Inheritance2 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Fruit apple=new Apple("Apple","Sweet","Medium");
-		Fruit orange=new Orange("Orange","Sour","Small");
-		
-		apple.eat();
-		orange.eat();
+		Employees emp = new Employees("John Doe", 75000.0, 2015, "NI123456A");
 
+		emp.displayInfo();
+
+		emp.setAnnualSalary(80000.0);
+		emp.setName("John D.");
+
+		System.out.println("\nUpdated Information:");
+		emp.displayInfo();
 	}
-
 }
